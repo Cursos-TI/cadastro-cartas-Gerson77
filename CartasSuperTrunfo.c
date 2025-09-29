@@ -13,6 +13,8 @@ int main() {
   float area;
   float pib;
   int numberPontosTuristicos;
+  float densidadePopulacional;
+  float pibPerCapita;
 
   // Área para entrada de dados
 
@@ -48,5 +50,11 @@ int main() {
   printf("PIB: %.2f\n", pib);
   printf("Número de Pontos Turísticos: %d\n", numberPontosTuristicos);
 
-return 0;
+  densidadePopulacional = (float) populacao / area;
+  pibPerCapita = (pib * 1000000000) / populacao;
+
+  printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional);
+  printf("PIB per Capita: %.2f reais\n", pibPerCapita);
+
+  return 0;
 } 
